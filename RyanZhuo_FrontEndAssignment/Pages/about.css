@@ -1,0 +1,242 @@
+/* Import Poppins Font From Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* Set default styles for all elements */
+*{
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-family: 'Poppins', sans-serif; /* Set default font family */
+} 
+
+
+/* Import Custom Stamp Font From Resources Folder */
+@font-face {
+  font-family: logoFont; /* Define custom font family name */
+  src: url(../Resources/Logo-Font.ttf); /* Set source of custom font */
+}
+
+/* Styles for the navigation bar */
+.navbar {
+  background-color: #000; /* Set background color */
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  transition: top 0.3s ease; /* Add transition for smooth movement */
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Styles for the navigation menu */
+nav {
+  display: flex; /* Set display to flex */
+  height: 10vh; /* Set height */
+  width: 100%; /* Set width */
+  background-image: url(../Resources/navbar.png); /* Set background image */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space items evenly */
+  padding: 0 3vh 0 3vh; /* Set padding */
+  flex-wrap: wrap; /* Allow items to wrap */
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Align to top */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+/* Styles for the logo */
+nav img{
+  height: 8vh; /* Set height */
+  width: auto; /* Set width to auto */
+  min-width: 150px; /* Set minimum width */
+  margin-left: -118%;
+}
+
+/* Styles for the navigation menu items */
+nav ul{
+  display: flex; /* Set display to flex */
+  flex-wrap: wrap; /* Allow items to wrap */
+  list-style: none; /* Remove bullet points */
+  margin-right: -24.75%;
+}
+
+/* Styles for individual navigation menu items */
+nav ul li{
+  margin: 0 0.6vw; /* Set margin */
+}
+
+/* Styles for links in the navigation menu */
+nav ul li a{
+  color: #f2f2f2; /* Set text color */
+  text-decoration: none; /* Remove underline */
+  font-size: max(1.4vw, 10px); /* Set font size */
+  font-weight: 500; /* Set font weight */
+  padding: 0.6vw 1vw; /* Set padding */
+  border-radius: 0.6vw; /* Set border radius */
+  letter-spacing: 0.1vw; /* Set letter spacing */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+
+/* Styles for active and hovered links */
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111; /* Change text color */
+  background: #fff; /* Change background color */
+}
+
+/* Styles for a solid gold divider */
+hr.solidgold {
+  border-top: 0.8vh solid goldenrod; /* Set border top */
+}
+
+/* Styles for removing margin gap */
+.nogap {
+  margin-top: 0; /* Reset top margin */
+  margin-bottom: 0; /* Reset bottom margin */
+}
+
+/* About Section Styles */
+.about-section {
+  background-image: url(../Resources/skyscraper.jpg); /* Set background image */
+  padding: 15vh 0 5vh 0; /* Set padding */
+  z-index: 4; /* Set z-index */
+}
+
+/* Styles for text inside about section */
+.about-section h2,
+.about-section p{
+  color: white; /* Set text color */
+  position: relative; /* Set position to relative */
+  z-index: 3; /* Set z-index */
+}
+
+/* Styles for overlay */
+.overlay {
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Set width */
+  height: 100%; /* Set height */
+  background-color: rgba(0, 0, 0, 0.5); /* Set background color with opacity */
+  z-index: 2; /* Set z-index */
+  opacity: 1; /* Initially fully opaque */
+  pointer-events: none; /* Allow interaction with elements underneath */
+}
+
+/* Adjust z-index of text elements */
+.container h2,
+.container h3,
+.container p,
+.container a {
+  position: relative; /* Set position to relative */
+  z-index: 3; /* Set z-index */
+}
+
+/* Container styles */
+.container {
+  max-width: 960px; /* Set max width */
+  margin: 0 auto; /* Center align horizontally */
+  padding: 0 20px; /* Set padding */
+}
+
+/* Styles for about section title */
+.about-section h2 {
+  font-size: 2.5rem; /* Set font size */
+  text-align: center; /* Center align text */
+  margin-bottom: 2rem; /* Set margin bottom */
+}
+
+/* Styles for about section paragraph */
+.about-section p {
+  font-size: 1.1rem; /* Set font size */
+  line-height: 1.6; /* Set line height */
+  margin-bottom: 1.5rem; /* Set margin bottom */
+  z-index: 10; /* Set z-index */
+}
+
+/* Processes Section Styles */
+.processes-section {
+  padding: 5vh 0 0 0; /* Set padding */
+  background-image: url(../Resources/arsenal.jpg); /* Set background image */
+  z-index: 10; /* Set z-index */
+}
+
+/* Styles for processes section title */
+.processes-section h2 {
+  text-align: center; /* Center align text */
+  margin-bottom: 3rem; /* Set margin bottom */
+  color: white; /* Set text color */
+}
+
+/* Styles for process card */
+.process-card {
+  text-align: center; /* Center align text */
+  margin-bottom: 2rem; /* Set margin bottom */
+  color: white; /* Set text color */
+}
+
+/* Styles for images inside process card */
+.process-card img {
+  max-width: 100%; /* Set max width */
+  border-radius: 10px; /* Set border radius */
+}
+
+/* Styles for process card title */
+.process-card h3 {
+  font-size: 2rem; /* Set font size */
+  margin-top: 1rem; /* Set margin top */
+  margin-bottom: 1rem; /* Set margin bottom */
+}
+
+/* Styles for process card paragraph */
+.process-card p {
+  font-size: 1.1rem; /* Set font size */
+  line-height: 1.6; /* Set line height */
+}
+
+/* Footer styles */
+.footer {
+  position: relative; /* Set position to relative */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Set width */
+  background-image: url(../Resources/footer.png); /* Set background image */
+  color: white; /* Set text color */
+  padding: 5vh 10vw; /* Set padding */
+  z-index: 1000; /* Set z-index */
+}
+
+/* Container for the footer */
+.footerContainer {
+  margin: auto; /* Center align horizontally */
+  color: #F2F2F2; /* Set text color */
+}
+
+/* Navbar like navigation menu in Footer */
+.footer ul {
+  display: flex; /* Set display to flex */
+  justify-content: center; /* Center align horizontally */
+  list-style: none; /* Remove bullet points */
+  margin-bottom: 2vh; /* Set margin bottom */
+}
+
+/* Styles for links in footer */
+.footer ul li a {
+  color: #F2F2F2; /* Set text color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 1.5vw; /* Set margin */
+}
+
+/* Styles for copyright statement */
+.statement {
+  color: #A6A6A6; /* Set text color */
+  font-weight: 300; /* Set font weight */
+  font-size: max(1vw, 6px); /* Set font size */
+  margin-bottom: 2vh; /* Set margin bottom */
+  text-align: center; /* Center align text */
+}
+
+/* Styles for copyright tag */
+.copyright {
+  padding: 2vh 0 0 0; /* Set padding */
+  font-size: 1.4vw; /* Set font size */
+  font-family: logoFont; /* Set font family */
+  color: #EAD3A0; /* Set text color */
+  text-align: center; /* Center align text */
+}

@@ -1,0 +1,1 @@
+iFrameResize({heightCalculationMethod:'taggedElement', minHeight: '500px' }, '#GGOQRJJZAW')

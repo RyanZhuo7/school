@@ -1,0 +1,137 @@
+/* Import Poppins Font From Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* Reset default margin, padding, and box-sizing; set font family to Poppins */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+
+/* Import Custom Stamp Font From Resources Folder */
+@font-face {
+  font-family: logoFont;
+  src: url(../Resources/Logo-Font.ttf);
+}
+
+/* Styling for the navigation bar */
+.navbar {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.3s ease; /* Add transition for smooth movement */
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Setting the base of the Navigation Bar and the background */
+nav {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  background-image: url(../Resources/navbar.png);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vh 0 3vh;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Setting the size and padding of Logo */
+nav img{
+  height: 8vh;
+  width: auto;
+  min-width: 150px;
+}
+
+/* Remove dot-points and organize horizontally */
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+/* Adding a 5px margin between buttons on Navbar */
+nav ul li{
+  margin: 0 0.6vw;
+}
+
+/* Styling for navigation links */
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: max(1.4vw, 10px);
+  font-weight: 500;
+  padding: 0.6vw 1vw;
+  border-radius: 0.6vw;
+  letter-spacing: 0.1vw;
+  transition: all 0.3s ease;
+}
+
+/* Once tab is active or cursor hovering above, change background to white and text to black */
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+
+/* Styling for the AI section */
+.ai {
+  margin-top: 10vh; /* Adjust margin to avoid overlap with navbar */
+  padding: 20px;
+  height: auto;
+}
+
+/* Styling for the footer */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-image: url(../Resources/footer.png);
+  color: white;
+  padding: 5vh 10vw;
+  z-index: 1000; /* Ensure footer stays on top */
+}
+
+/* Container for the footer */
+.footerContainer {
+  margin: auto;
+  color: #F2F2F2;
+}
+
+/* Styling for navigation menu in footer */
+.footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 2vh; /* Add margin at the bottom for spacing */
+}
+
+/* Styling for the text of the menu buttons in the footer */
+.footer ul li a {
+  color: #F2F2F2;
+  text-decoration: none;
+  margin: 0 1.5vw; /* Adjust the horizontal margin */
+}
+
+/* Styling for the copyright statement */
+.statement {
+  color: #A6A6A6;
+  font-weight: 300;
+  font-size: max(1vw, 6px);
+  margin-bottom: 2vh; /* Add margin at the bottom for spacing */
+  text-align: center; /* Center-align the copyright statement */
+}
+
+/* Styling for the copyright tag */
+.copyright {
+  padding: 2vh 0 0 0;
+  font-size: 1.4vw;
+  font-family: logoFont;
+  color: #EAD3A0;
+  text-align: center; /* Center-align the copyright tag */
+}
